@@ -37,3 +37,11 @@ jobs:
       - name: Run Tests
         run: |
           pytest
+
+      - name: Run Tests with Coverage
+        run: |
+          pytest --cov=app
+
+      - name: Build Docker Image
+        run: |
+          docker build -t fastapi-cicd .
